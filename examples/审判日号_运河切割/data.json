@@ -1,0 +1,102 @@
+[
+  {
+    "镜号": 1,
+    "景别": "大远景",
+    "画面描述": "清晨的巴拿马运河，薄雾贴着水面。审判日号巨轮满载集装箱，沿着船闸航道平稳航行，两岸是浓密的热带雨林。水面没有一丝波澜。",
+    "台词": "（无）",
+    "声音": "低沉引擎声、水流擦过船壳的闷响、远处海鸟",
+    "Midjourney英文提示词": "Wide aerial establishing shot, Panama Canal at dawn, thin mist hovering over still water, a colossal cargo ship fully loaded with shipping containers gliding steadily through the lock channel, dense tropical rainforest on both banks, muted teal and grey palette, cold morning light, calm and ominous stillness, cinematic film still, anamorphic lens, 24mm, ultra detailed, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 2,
+    "景别": "全景",
+    "画面描述": "从运河岸上平视，巨大的钢铁船身缓缓滑过混凝土闸壁，船壳上有锈迹和水线，甲板上几个船员的身影很小。",
+    "台词": "（无）",
+    "声音": "船壳与闸壁间的回响、水声",
+    "Midjourney英文提示词": "Medium wide shot from the canal bank, the massive steel hull of a cargo ship sliding slowly past concrete lock walls, rust streaks and waterline stains, tiny silhouettes of crew on deck, overcast diffuse daylight, documentary realism, monumental scale against human figures, cinematic film still, 35mm lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 3,
+    "景别": "中近景",
+    "补镜": true,
+    "画面描述": "甲板上，一名穿橙色工装的船员走到一半突然停住，头微微侧过去，像在听什么。风把头发吹起来。",
+    "台词": "（无）",
+    "声音": "极微弱、几乎听不见的高频切割声（第一次出现）",
+    "Midjourney英文提示词": "Medium close-up on a cargo ship deck, a deckhand in orange coveralls frozen mid-step, head tilted slightly as if listening, wind in his hair, stacked containers blurred behind him, cold overcast light, subtle unease, shallow depth of field, cinematic film still, 50mm lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 4,
+    "景别": "特写",
+    "画面描述": "船体中部的钢板表面，几条比头发丝还细的丝线正切入漆面和钢铁，切口平滑得像被刀抹过，没有火花。",
+    "台词": "（无）",
+    "声音": "高频的细微切割声，像指甲划过玻璃",
+    "Midjourney英文提示词": "Extreme close-up macro shot, several hair-thin filaments slicing into a painted steel hull plate, perfectly smooth incision line, no sparks no fire no smoke, tiny metallic dust drifting in the air, raking sunlight revealing the cut edge, hyper detailed metal texture, cinematic film still, macro lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 5,
+    "景别": "特写",
+    "画面描述": "一根纳米丝绷得笔直，对着灰白的天空几乎看不见，只有在切开钢板的位置泛出一点银亮的反光。",
+    "台词": "（无）",
+    "声音": "几乎静音，只剩极细的嗡鸣",
+    "Midjourney英文提示词": "Extreme close-up, a single nanofiber wire stretched taut and nearly invisible against a pale grey sky, only a faint silver glint where it meets steel, subtle chromatic fringe, shallow depth of field, bokeh, cold desaturated tones, clinical and terrifying, cinematic film still, macro probe lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 6,
+    "景别": "全景",
+    "画面描述": "船体中部，一道极细的水平切痕横贯整艘船身。没有爆炸，没有火光，没有烟，海面平得像镜子。",
+    "台词": "（无）",
+    "声音": "刻意的死寂，只剩水声",
+    "Midjourney英文提示词": "Wide side view of a giant cargo ship, a razor-thin horizontal cut line running across the entire midship hull, dead silent scene, no explosion no fire no smoke, flat grey sea like a mirror, cold flat lighting, unsettling stillness, symmetrical composition, cinematic film still, 35mm lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 7,
+    "景别": "大远景",
+    "画面描述": "高空俯拍：整艘巨轮像一块被切成数十片的黄油，各段之间出现细细的缝隙，断面在冷光下泛着湿冷的金属光泽。",
+    "台词": "（无）",
+    "声音": "金属轻微错位的呻吟",
+    "Midjourney英文提示词": "High angle aerial shot, a colossal cargo ship sliced into dozens of parallel slabs like butter, sections slightly misaligned, thin dark gaps between slabs, wet smooth cut faces glinting under overcast light, surreal monumental scale, epic and horrifying, cinematic film still, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 8,
+    "景别": "全景",
+    "补镜": true,
+    "画面描述": "上层建筑和集装箱堆垛开始倾斜、错位，成排的集装箱滑落坠入运河，砸出高高的白色水柱。",
+    "台词": "（无）",
+    "声音": "钢铁撕裂声、集装箱落水的闷响",
+    "Midjourney英文提示词": "Wide shot, upper decks and container stacks tilting and separating, rows of shipping containers sliding off into the canal, huge white water plumes on impact, debris flying, dramatic chaotic motion, cold overcast daylight, high shutter speed, cinematic film still, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 9,
+    "景别": "中景",
+    "补镜": true,
+    "画面描述": "倾斜的甲板上，船员顺着切面滑落，拼命抓住栏杆，仰头张嘴尖叫。",
+    "台词": "（无）",
+    "声音": "惨叫、金属摩擦、水声",
+    "Midjourney英文提示词": "Medium shot, crew members sliding down a tilting deck, clutching at railings, mouths open screaming, containers looming behind, motion blur, handheld chaotic energy, cold desaturated light, cinematic film still, 35mm lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 10,
+    "景别": "近景",
+    "补镜": true,
+    "画面描述": "一张惊恐到变形的脸贴在湿冷的钢板旁，眼睛睁到极限，水雾像雨一样打在脸上。",
+    "台词": "（无）",
+    "声音": "近处的水流声盖住喊叫",
+    "Midjourney英文提示词": "Close-up, a panicked crewman's face pressed close to wet cold steel, eyes wide with terror, mouth open screaming, spray hitting his skin like rain, cold rim light, deep shadow, hyper realistic skin texture, cinematic film still, 85mm lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 11,
+    "景别": "全景",
+    "画面描述": "贴着水面看：被切开的船段一段段沉下去，翻涌的白沫把残骸吞没，碎片在漩涡里打转。",
+    "台词": "（无）",
+    "声音": "巨大的灌水声、金属断裂",
+    "Midjourney英文提示词": "Wide shot at water level, separated hull sections sinking one after another, churning white foam swallowing the wreckage, debris spinning in the vortex, dark cold water, low angle, dramatic scale, cinematic film still, anamorphic lens, --ar 16:9 --style raw"
+  },
+  {
+    "镜号": 12,
+    "景别": "大远景",
+    "画面描述": "航拍：运河水面重新变得平整，只剩一圈圈漩涡、浮油泛出的彩光，和几只漂着的集装箱。薄雾还在。",
+    "台词": "（无）",
+    "声音": "只剩水声，彻底安静",
+    "Midjourney英文提示词": "High aerial shot, calm canal surface after catastrophe, swirling vortex rings, iridescent oil slick, a few floating shipping containers, thin mist, empty and silent, muted cold palette, epic wide composition, cinematic film still, --ar 16:9 --style raw"
+  }
+]

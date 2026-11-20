@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>审判日号 · 运河切割 · 短剧分镜表（12 镜）</title>
+<style>
+:root{
+  --bg:#0a0a0c; --panel:#111218; --panel-2:#171a22; --line:#262a35;
+  --text:#e9e6e0; --muted:#9aa0ad; --dim:#6d7381;
+  --gold:#c9a25a; --gold-soft:rgba(201,162,90,.14);
+  --ice:#6fa8c7; --crimson:#b2454c;
+  --serif:"Songti SC","Noto Serif SC",Georgia,"SimSun",serif;
+  --sans:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text); font-family:var(--sans);
+  line-height:1.65; overflow-x:hidden;
+  background-image:radial-gradient(900px 500px at 12% -10%,rgba(201,162,90,.10),transparent 60%),
+                   radial-gradient(700px 460px at 92% 0%,rgba(111,168,199,.08),transparent 60%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+.top{padding:clamp(38px,6vw,72px) 0 clamp(22px,3vw,32px);border-bottom:1px solid var(--line)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 18px;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);display:block}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(32px,6vw,58px);
+  line-height:1.1;margin:0 0 14px;letter-spacing:.02em}
+h1 .thin{display:block;font-size:clamp(15px,2.4vw,20px);font-weight:400;color:var(--muted);
+  letter-spacing:.22em;margin-top:14px;font-family:var(--sans)}
+.logline{max-width:64ch;color:#c9c6bf;font-size:clamp(14px,1.6vw,16px);margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+.meta li{font-size:12.5px;color:var(--muted);border:1px solid var(--line);
+  background:var(--panel);padding:7px 13px;border-radius:999px;letter-spacing:.04em}
+.meta li b{color:var(--text);font-weight:600;font-family:var(--serif);font-size:14px}
+
+.overview{display:grid;gap:clamp(18px,3vw,34px);grid-template-columns:1fr;
+  padding:clamp(24px,4vw,40px) 0;border-bottom:1px solid var(--line)}
+@media(min-width:820px){.overview{grid-template-columns:1.15fr 1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,2.6vw,26px)}
+.panel h2{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
+  margin:0 0 18px;font-weight:600;font-family:var(--sans)}
+.kv{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:14px}
+.kv dt{color:var(--dim);white-space:nowrap;font-size:13px}
+.kv dd{margin:0;color:#d5d2cb}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.bar-row{display:grid;grid-template-columns:58px 1fr 26px;align-items:center;gap:12px;font-size:13px}
+.bar-label{color:var(--muted);letter-spacing:.06em;white-space:nowrap}
+.bar-track{height:8px;background:#1d202a;border-radius:99px;overflow:hidden}
+.bar-fill{display:block;height:100%;border-radius:99px;transform-origin:left}
+.bar-fill.wide{background:linear-gradient(90deg,#8a6f36,var(--gold))}
+.bar-fill.medium{background:linear-gradient(90deg,#4b5262,#8d94a4)}
+.bar-fill.close{background:linear-gradient(90deg,#3f6a80,var(--ice))}
+.bar-fill.ecu{background:linear-gradient(90deg,#6c2a2f,var(--crimson))}
+.bar-val{text-align:right;color:var(--text);font-family:var(--serif);font-size:15px}
+
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(10,10,12,.9);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 0}
+.toolbar-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.chips{display:flex;gap:6px;flex-wrap:wrap;flex:1 1 320px}
+.chip{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:32px;
+  padding:0 8px;font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);
+  transition:color .18s,border-color .18s,transform .18s}
+.chip:hover{color:var(--gold);border-color:rgba(201,162,90,.55);transform:translateY(-1px)}
+.btn{font:inherit;font-size:12.5px;color:var(--text);background:var(--panel-2);
+  border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer;
+  transition:border-color .18s,color .18s,transform .18s}
+.btn:hover{border-color:rgba(201,162,90,.55);color:var(--gold)}
+.btn:active{transform:scale(.97)}
+
+.shots{list-style:none;margin:0;padding:clamp(26px,4vw,44px) 0 0;display:grid;gap:14px}
+.shot{display:grid;grid-template-columns:64px 1fr;gap:clamp(14px,2.4vw,26px);
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:clamp(18px,2.6vw,26px);transition:border-color .2s,transform .2s;scroll-margin-top:96px}
+.shot:hover{border-color:#333846;transform:translateY(-2px)}
+.shot:target{border-color:rgba(201,162,90,.7);background:#15161d}
+@media(min-width:760px){.shot{grid-template-columns:92px 1fr}}
+.shot-rail{display:flex;flex-direction:column;align-items:flex-start;gap:10px;
+  border-right:1px solid var(--line);padding-right:clamp(12px,2vw,20px)}
+.shot-no{font-family:var(--serif);font-size:clamp(24px,3.6vw,34px);line-height:1;
+  color:var(--gold);letter-spacing:.02em}
+.shot-size{font-size:11.5px;letter-spacing:.14em;padding:3px 8px;border-radius:5px;
+  border:1px solid;white-space:nowrap}
+.shot-size.wide{color:var(--gold);border-color:rgba(201,162,90,.45);background:var(--gold-soft)}
+.shot-size.medium{color:#a7aebc;border-color:rgba(167,174,188,.35);background:rgba(167,174,188,.08)}
+.shot-size.close{color:var(--ice);border-color:rgba(111,168,199,.45);background:rgba(111,168,199,.1)}
+.shot-size.ecu{color:#d57a80;border-color:rgba(178,69,76,.5);background:rgba(178,69,76,.12)}
+.shot-flag{font-size:10.5px;letter-spacing:.12em;color:#d0a85f;border:1px dashed rgba(201,162,90,.5);
+  border-radius:4px;padding:1px 6px}
+.shot-main{min-width:0}
+.shot-desc{margin:0;font-size:clamp(14.5px,1.7vw,16px);color:#dedbd4;line-height:1.78}
+.shot-audio{display:flex;gap:10px;align-items:baseline;margin:12px 0 0;font-size:12.5px;color:#a8a08f}
+.audio-tag{font-size:11px;letter-spacing:.16em;color:#8d8578;flex:0 0 auto;border:1px solid var(--line);
+  border-radius:4px;padding:1px 6px}
+.shot-line{display:flex;gap:12px;align-items:flex-start;margin:16px 0 0;
+  border-left:2px solid var(--crimson);padding:2px 0 2px 14px}
+.line-tag{font-size:11px;letter-spacing:.16em;color:#d57a80;flex:0 0 auto;padding-top:4px}
+.shot-line p{margin:0;font-family:var(--serif);font-size:clamp(15px,1.9vw,17.5px);
+  color:#f2ece2;letter-spacing:.02em}
+.shot-noline{margin:14px 0 0;font-size:12px;color:var(--dim);letter-spacing:.14em}
+.prompt{margin:16px 0 0;border-top:1px dashed var(--line);padding-top:12px}
+.prompt summary{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  cursor:pointer;font-size:12px;letter-spacing:.14em;color:var(--dim);list-style:none}
+.prompt summary::-webkit-details-marker{display:none}
+.prompt summary:hover{color:var(--gold)}
+.caret{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);transition:transform .2s;margin-right:4px}
+.prompt[open] .caret{transform:rotate(-135deg)}
+.prompt-body{position:relative;margin-top:12px}
+.prompt pre{margin:0;padding:14px 14px 40px;background:#0c0d12;border:1px solid var(--line);
+  border-radius:10px;font-family:var(--mono);font-size:12.5px;line-height:1.75;color:#b9c0cc;
+  white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow:auto}
+.copy{position:absolute;right:10px;bottom:10px;font:inherit;font-size:11.5px;color:var(--muted);
+  background:var(--panel-2);border:1px solid var(--line);border-radius:7px;padding:5px 11px;cursor:pointer;
+  transition:color .18s,border-color .18s}
+.copy:hover{color:var(--gold);border-color:rgba(201,162,90,.55)}
+.copy.done{color:#7fbf9a;border-color:rgba(127,191,154,.5)}
+
+.foot{margin:clamp(40px,6vw,72px) 0 0;padding:24px 0 56px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:12.5px;color:var(--dim)}
+.foot p{margin:0;max-width:70ch}
+
+@media print{
+  :root{--bg:#fff;--panel:#fff;--panel-2:#fff;--line:#d6d6d6;--text:#111;--muted:#555;--dim:#666}
+  body{background:#fff;color:#111;background-image:none}
+  .toolbar,.copy{display:none!important}
+  .shot{break-inside:avoid;page-break-inside:avoid;border:1px solid #ddd;transform:none!important}
+  .shot-no{color:#8a6f36}
+  .prompt pre{max-height:none;background:#f7f7f7;color:#222;border-color:#e2e2e2}
+  .logline,.shot-desc{color:#222}
+  .shot-line p{color:#111}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .shot:hover,.chip:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">Shot List · 短剧分镜</p>
+  <h1>审判日号 · 运河切割<span class="thin">第 01 场 · 巴拿马运河</span></h1>
+  <p class="logline">巨轮平稳航行，发丝般的纳米丝悄然切入钢铁；没有爆炸，没有巨响，整艘船像黄油一样被切成数十片，顺着切面错位、滑落，把惨叫淹没在冰冷的河水里。</p>
+  <ul class="meta">
+    <li><b>12</b> 个镜头</li>
+    <li>景别构成 <b>大远景3·全景4·中景1·近景1·特写2·中近景1</b></li>
+    <li>对白镜头 <b>0</b></li>
+    <li>补镜 <b>4</b></li>
+    <li>画幅 <b>16:9</b></li>
+  </ul>
+</header>
+<section class="overview" aria-label="分镜概览">
+  <div class="panel">
+    <h2>场景与人物</h2>
+    <dl class="kv">
+      <dt>场景</dt><dd>巴拿马运河航道与船闸，清晨薄雾，巨轮甲板与船体中部</dd>
+      <dt>人物</dt><dd>审判日号船员（无对白，以身体与表情演出）</dd>
+      <dt>情绪线</dt><dd>平静 → 异样 → 无声切割 → 错位 → 崩解 → 死寂</dd>
+      <dt>视觉基调</dt><dd>冷青灰主调，无火光无烟尘，用“过分的平静”制造恐怖</dd>
+    </dl>
+  </div>
+  <div class="panel">
+    <h2>景别分布</h2>
+    <ul class="bars"><li class="bar-row"><span class="bar-label">大远景</span><span class="bar-track"><span class="bar-fill wide" style="width:75%"></span></span><span class="bar-val">3</span></li><li class="bar-row"><span class="bar-label">全景</span><span class="bar-track"><span class="bar-fill wide" style="width:100%"></span></span><span class="bar-val">4</span></li><li class="bar-row"><span class="bar-label">中景</span><span class="bar-track"><span class="bar-fill medium" style="width:25%"></span></span><span class="bar-val">1</span></li><li class="bar-row"><span class="bar-label">近景</span><span class="bar-track"><span class="bar-fill close" style="width:25%"></span></span><span class="bar-val">1</span></li><li class="bar-row"><span class="bar-label">特写</span><span class="bar-track"><span class="bar-fill ecu" style="width:50%"></span></span><span class="bar-val">2</span></li><li class="bar-row"><span class="bar-label">中近景</span><span class="bar-track"><span class="bar-fill close" style="width:25%"></span></span><span class="bar-val">1</span></li></ul>
+  </div>
+</section>
+</div>
+<div class="toolbar">
+<div class="wrap toolbar-inner">
+<nav class="chips" aria-label="镜头索引"><a class="chip" href="#shot-01">01</a><a class="chip" href="#shot-02">02</a><a class="chip" href="#shot-03">03</a><a class="chip" href="#shot-04">04</a><a class="chip" href="#shot-05">05</a><a class="chip" href="#shot-06">06</a><a class="chip" href="#shot-07">07</a><a class="chip" href="#shot-08">08</a><a class="chip" href="#shot-09">09</a><a class="chip" href="#shot-10">10</a><a class="chip" href="#shot-11">11</a><a class="chip" href="#shot-12">12</a></nav>
+<button class="btn" id="toggle-all" type="button" data-state="closed">展开全部提示词</button>
+</div>
+</div>
+<div class="wrap">
+<main>
+<ol class="shots">
+<article class="shot" id="shot-01">
+  <div class="shot-rail">
+    <span class="shot-no">01</span>
+    <span class="shot-size wide">大远景</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">清晨的巴拿马运河，薄雾贴着水面。审判日号巨轮满载集装箱，沿着船闸航道平稳航行，两岸是浓密的热带雨林。水面没有一丝波澜。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>低沉引擎声、水流擦过船壳的闷响、远处海鸟</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-01">Wide aerial establishing shot, Panama Canal at dawn, thin mist hovering over still water, a colossal cargo ship fully loaded with shipping containers gliding steadily through the lock channel, dense tropical rainforest on both banks, muted teal and grey palette, cold morning light, calm and ominous stillness, cinematic film still, anamorphic lens, 24mm, ultra detailed, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-01" aria-label="复制第01镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-02">
+  <div class="shot-rail">
+    <span class="shot-no">02</span>
+    <span class="shot-size wide">全景</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">从运河岸上平视，巨大的钢铁船身缓缓滑过混凝土闸壁，船壳上有锈迹和水线，甲板上几个船员的身影很小。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>船壳与闸壁间的回响、水声</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-02">Medium wide shot from the canal bank, the massive steel hull of a cargo ship sliding slowly past concrete lock walls, rust streaks and waterline stains, tiny silhouettes of crew on deck, overcast diffuse daylight, documentary realism, monumental scale against human figures, cinematic film still, 35mm lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-02" aria-label="复制第02镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-03">
+  <div class="shot-rail">
+    <span class="shot-no">03</span>
+    <span class="shot-size close">中近景</span>
+    <span class="shot-flag">补</span>
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">甲板上，一名穿橙色工装的船员走到一半突然停住，头微微侧过去，像在听什么。风把头发吹起来。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>极微弱、几乎听不见的高频切割声（第一次出现）</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-03">Medium close-up on a cargo ship deck, a deckhand in orange coveralls frozen mid-step, head tilted slightly as if listening, wind in his hair, stacked containers blurred behind him, cold overcast light, subtle unease, shallow depth of field, cinematic film still, 50mm lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-03" aria-label="复制第03镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-04">
+  <div class="shot-rail">
+    <span class="shot-no">04</span>
+    <span class="shot-size ecu">特写</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">船体中部的钢板表面，几条比头发丝还细的丝线正切入漆面和钢铁，切口平滑得像被刀抹过，没有火花。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>高频的细微切割声，像指甲划过玻璃</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-04">Extreme close-up macro shot, several hair-thin filaments slicing into a painted steel hull plate, perfectly smooth incision line, no sparks no fire no smoke, tiny metallic dust drifting in the air, raking sunlight revealing the cut edge, hyper detailed metal texture, cinematic film still, macro lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-04" aria-label="复制第04镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-05">
+  <div class="shot-rail">
+    <span class="shot-no">05</span>
+    <span class="shot-size ecu">特写</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">一根纳米丝绷得笔直，对着灰白的天空几乎看不见，只有在切开钢板的位置泛出一点银亮的反光。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>几乎静音，只剩极细的嗡鸣</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-05">Extreme close-up, a single nanofiber wire stretched taut and nearly invisible against a pale grey sky, only a faint silver glint where it meets steel, subtle chromatic fringe, shallow depth of field, bokeh, cold desaturated tones, clinical and terrifying, cinematic film still, macro probe lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-05" aria-label="复制第05镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-06">
+  <div class="shot-rail">
+    <span class="shot-no">06</span>
+    <span class="shot-size wide">全景</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">船体中部，一道极细的水平切痕横贯整艘船身。没有爆炸，没有火光，没有烟，海面平得像镜子。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>刻意的死寂，只剩水声</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-06">Wide side view of a giant cargo ship, a razor-thin horizontal cut line running across the entire midship hull, dead silent scene, no explosion no fire no smoke, flat grey sea like a mirror, cold flat lighting, unsettling stillness, symmetrical composition, cinematic film still, 35mm lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-06" aria-label="复制第06镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-07">
+  <div class="shot-rail">
+    <span class="shot-no">07</span>
+    <span class="shot-size wide">大远景</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">高空俯拍：整艘巨轮像一块被切成数十片的黄油，各段之间出现细细的缝隙，断面在冷光下泛着湿冷的金属光泽。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>金属轻微错位的呻吟</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-07">High angle aerial shot, a colossal cargo ship sliced into dozens of parallel slabs like butter, sections slightly misaligned, thin dark gaps between slabs, wet smooth cut faces glinting under overcast light, surreal monumental scale, epic and horrifying, cinematic film still, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-07" aria-label="复制第07镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-08">
+  <div class="shot-rail">
+    <span class="shot-no">08</span>
+    <span class="shot-size wide">全景</span>
+    <span class="shot-flag">补</span>
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">上层建筑和集装箱堆垛开始倾斜、错位，成排的集装箱滑落坠入运河，砸出高高的白色水柱。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>钢铁撕裂声、集装箱落水的闷响</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-08">Wide shot, upper decks and container stacks tilting and separating, rows of shipping containers sliding off into the canal, huge white water plumes on impact, debris flying, dramatic chaotic motion, cold overcast daylight, high shutter speed, cinematic film still, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-08" aria-label="复制第08镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-09">
+  <div class="shot-rail">
+    <span class="shot-no">09</span>
+    <span class="shot-size medium">中景</span>
+    <span class="shot-flag">补</span>
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">倾斜的甲板上，船员顺着切面滑落，拼命抓住栏杆，仰头张嘴尖叫。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>惨叫、金属摩擦、水声</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-09">Medium shot, crew members sliding down a tilting deck, clutching at railings, mouths open screaming, containers looming behind, motion blur, handheld chaotic energy, cold desaturated light, cinematic film still, 35mm lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-09" aria-label="复制第09镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-10">
+  <div class="shot-rail">
+    <span class="shot-no">10</span>
+    <span class="shot-size close">近景</span>
+    <span class="shot-flag">补</span>
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">一张惊恐到变形的脸贴在湿冷的钢板旁，眼睛睁到极限，水雾像雨一样打在脸上。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>近处的水流声盖住喊叫</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-10">Close-up, a panicked crewman&#x27;s face pressed close to wet cold steel, eyes wide with terror, mouth open screaming, spray hitting his skin like rain, cold rim light, deep shadow, hyper realistic skin texture, cinematic film still, 85mm lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-10" aria-label="复制第10镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-11">
+  <div class="shot-rail">
+    <span class="shot-no">11</span>
+    <span class="shot-size wide">全景</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">贴着水面看：被切开的船段一段段沉下去，翻涌的白沫把残骸吞没，碎片在漩涡里打转。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>巨大的灌水声、金属断裂</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-11">Wide shot at water level, separated hull sections sinking one after another, churning white foam swallowing the wreckage, debris spinning in the vortex, dark cold water, low angle, dramatic scale, cinematic film still, anamorphic lens, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-11" aria-label="复制第11镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+<article class="shot" id="shot-12">
+  <div class="shot-rail">
+    <span class="shot-no">12</span>
+    <span class="shot-size wide">大远景</span>
+    
+  </div>
+  <div class="shot-main">
+    <p class="shot-desc">航拍：运河水面重新变得平整，只剩一圈圈漩涡、浮油泛出的彩光，和几只漂着的集装箱。薄雾还在。</p>
+    <p class="shot-audio"><span class="audio-tag">声音</span>只剩水声，彻底安静</p>
+    
+    <details class="prompt">
+      <summary><span>Midjourney 提示词</span><span class="caret" aria-hidden="true"></span></summary>
+      <div class="prompt-body">
+        <pre id="prompt-12">High aerial shot, calm canal surface after catastrophe, swirling vortex rings, iridescent oil slick, a few floating shipping containers, thin mist, empty and silent, muted cold palette, epic wide composition, cinematic film still, --ar 16:9 --style raw</pre>
+        <button class="copy" type="button" data-target="prompt-12" aria-label="复制第12镜提示词">复制</button>
+      </div>
+    </details>
+  </div>
+</article>
+</ol>
+</main>
+<footer class="foot">
+  <p>标注“补”的镜头为原文未明写、按镜头语言补足的画面；提示词统一 16:9，可直接用于 Midjourney 生成关键帧参考。</p>
+  <p>点击镜号可跳转 · 提示词支持一键复制</p>
+</footer>
+</div>
+<script>
+(function(){
+  try{
+    var all = document.querySelectorAll('details.prompt');
+    var toggle = document.getElementById('toggle-all');
+    if(toggle){
+      toggle.addEventListener('click', function(){
+        var open = toggle.getAttribute('data-state') !== 'open';
+        for(var i=0;i<all.length;i++){ all[i].open = open; }
+        toggle.setAttribute('data-state', open ? 'open' : 'closed');
+        toggle.textContent = open ? '收起全部提示词' : '展开全部提示词';
+      });
+    }
+    function fallback(text, done){
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.setAttribute('readonly','');
+        ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta); done();
+      }catch(err2){
+        var b = document.querySelector('.copy');
+        if(b){ b.textContent = '请手动选择复制'; }
+      }
+    }
+    document.addEventListener('click', function(e){
+      var btn = e.target.closest ? e.target.closest('.copy') : null;
+      if(!btn) return;
+      var pre = document.getElementById(btn.getAttribute('data-target'));
+      if(!pre) return;
+      var text = pre.textContent || '';
+      var done = function(){
+        var old = btn.textContent;
+        btn.textContent = '已复制';
+        btn.classList.add('done');
+        setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+      };
+      try{
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(text).then(done, function(){ fallback(text, done); });
+        } else { fallback(text, done); }
+      }catch(err){ fallback(text, done); }
+    });
+    var links = document.querySelectorAll('a.chip');
+    for(var i=0;i<links.length;i++){
+      links[i].addEventListener('click', function(ev){
+        var id = this.getAttribute('href').slice(1);
+        var target = document.getElementById(id);
+        if(!target) return;
+        ev.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    }
+    var reopened = [];
+    window.addEventListener('beforeprint', function(){
+      reopened = [];
+      for(var j=0;j<all.length;j++){
+        if(!all[j].open){ reopened.push(all[j]); all[j].open = true; }
+      }
+    });
+    window.addEventListener('afterprint', function(){
+      for(var k=0;k<reopened.length;k++){ reopened[k].open = false; }
+      reopened = [];
+    });
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
